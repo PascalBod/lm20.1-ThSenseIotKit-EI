@@ -24,3 +24,31 @@ Check [this guide](https://github.com/PascalBod/lm20.1-vm).
 
 ## Installing dependencies
 
+Install *nvm* as described [here](https://github.com/nvm-sh/nvm).
+
+Then install *npm*:
+
+```shell
+$ nvm install v14.16.0  # The current LTS version.
+```
+
+Install *screen*:
+
+```shell
+$ sudo apt install screen
+```
+
+Install Edge Impulse CLI:
+
+```shell
+$ npm install -g edge-impulse-cli
+```
+
+Several warnings and notes are displayed. Let's suppose we can ignore them...
+
+## Connecting to Edge Impulse
+
+Follow [Edge Impulse instructions](https://docs.edgeimpulse.com/docs/silabs-thunderboard-sense-2#connecting-to-edge-impulse).
+
+After having connected the Thunderboard Sense 2 board to a USB port of the host machine, ask VirtualBox to capture it for the virtual machine : in VirtualBox menu for the VM, select **Devices > USB** and tick **Silicon Labs J-Link OB [0100]**. To make the capture permanent, select **Devices > USB > USB Settings...** and add a USB device filter for the board.
+
