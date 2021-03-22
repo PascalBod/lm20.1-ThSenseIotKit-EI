@@ -14,7 +14,7 @@ The virtualization environment is VirtualBox, and the guest machine runs Linux M
 
 # Creation of the VM
 
-Check [this guide](https://github.com/PascalBod/lm20.1-vm).
+Check [this guide](https://github.com/PascalBod/lm20.1-vm). Don't forget to add the user to *dialout* group, as stated.
 
 # VM configuration
 
@@ -23,6 +23,12 @@ Check [this guide](https://github.com/PascalBod/lm20.1-vm).
 * [SiLabs Thunderboard Sense 2 - Edge Impulse](https://docs.edgeimpulse.com/docs/silabs-thunderboard-sense-2)
 
 ## Installing dependencies
+
+Install *g++*:
+
+```shell
+$ sudo apt install g++
+```
 
 Install *nvm* as described [here](https://github.com/nvm-sh/nvm).
 
@@ -46,9 +52,17 @@ $ npm install -g edge-impulse-cli
 
 Several warnings and notes are displayed. Let's suppose we can ignore them...
 
-## Connecting to Edge Impulse
+# Connecting to Edge Impulse
 
-Follow [Edge Impulse instructions](https://docs.edgeimpulse.com/docs/silabs-thunderboard-sense-2#connecting-to-edge-impulse).
+Signup on [Edge Impulse website](https://studio.edgeimpulse.com/signup).
 
-After having connected the Thunderboard Sense 2 board to a USB port of the host machine, ask VirtualBox to capture it for the virtual machine : in VirtualBox menu for the VM, select **Devices > USB** and tick **Silicon Labs J-Link OB [0100]**. To make the capture permanent, select **Devices > USB > USB Settings...** and add a USB device filter for the board.
+Connect the Thunderboard Sense 2 board to a USB port of the host machine. Ask VirtualBox to capture it for the virtual machine: in VirtualBox menu for the VM, select **Devices > USB** and tick **Silicon Labs J-Link OB [0100]**. To make the capture permanent, select **Devices > USB > USB Settings...** and add a USB device filter for the board.
 
+Then follow [Edge Impulse instructions](https://docs.edgeimpulse.com/docs/silabs-thunderboard-sense-2#connecting-to-edge-impulse).
+
+
+If you face the *Error while connecting to CPU* problem when flashing the board with the Edge Impulse binary file, push the board *RESET* button, keep it pushed until you start copying the binary file to the TB004 drive, and release it.
+
+# Start playing with ML
+
+Follow the [*continuous motion recognition*](https://docs.edgeimpulse.com/docs/continuous-motion-recognition) tutorial, for instance.
