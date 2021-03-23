@@ -24,7 +24,7 @@ Check [this guide](https://github.com/PascalBod/lm20.1-vm). Don't forget to add 
 
 ## Installing dependencies
 
-Install *g++*:
+Install *g++* (required by Edge Impulse CLI installation):
 
 ```shell
 $ sudo apt install g++
@@ -61,7 +61,7 @@ Connect the Thunderboard Sense 2 board to a USB port of the host machine. Ask Vi
 Then follow [Edge Impulse instructions](https://docs.edgeimpulse.com/docs/silabs-thunderboard-sense-2#connecting-to-edge-impulse).
 
 
-If you face the *Error while connecting to CPU* problem when flashing the board with the Edge Impulse binary file, push the board *RESET* button, keep it pushed until you start copying the binary file to the TB004 drive, and release it.
+If you face the *Error while connecting to CPU* problem when flashing the board with the Edge Impulse binary file, push the board *RESET* button, keep it pushed until you start copying the binary file to the TB004 drive, and release it (installing *Simplicity Studio 5* as proposed in the instructions above did not correct the problem for me while using the RESET button did it).
 
 # Start playing with ML
 
